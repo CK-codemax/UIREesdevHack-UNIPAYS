@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UNIPAYS</title>
+	<script src="https://kit.fontawesome.com/0679482f3b.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Images/unipays2.png" type="image/x-icon">
+	
+	<script defer src="mainApp.js"></script>
+	
+	
+	</head>
+	<body>
+	
+			<!-- WELCOME-->
+		
+			
+			<div class="show welcome-picture" id="welcome-page">
+			<div class="loan-pages unipays-welcome">
+			
+			<img id="unipays-welcome-image" src="Images/unipays1.png" alt="welcome-image">
+			
+			</div>
+			</div>
+			
+			
+			<div class="app-container">
+			
+			<!--LOAN PAGE-->
+			
+			<div class="loan-pages main-area hide" id="loan-page">
+			
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="loan-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Loans</p>
+			<div class="services-type-icon" ></div>
+			</div>
+			<div class="student-loan-container">
+			
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Student soft loans<p>
+			<p>Available Amount</p>
+			<p>&#8358;<span id = "soft-loan-given-amount">$5,000</span></p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="student-soft-loan-btn">Request Loan</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Tuition Fees Assist<p>
+			<p>Total Amount of fees unpaid</p>
+			<p id ="tuition-given-amount">$5,000</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="tuition-fees-btn">Request Loan</button>
+			</div>
+			</div>
+			
+			
+			</div>
+			</div>
+			
+			<!--TOTAL ASSETS-->
+			
+			<div class="loan-pages main-area hide" id="total-assets-page">
+			
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="total-assets-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Total Assets</p>
+			<div class="services-type-icon" ></div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			
+			
+			<div class="details-arrange"><p class="config-arrange" >Current Balance :</p> <div><span>&#8358;</span><span id="total-assets-current-balance">20,000</span></div></div>
+			<div class="details-arrange"><p class="config-arrange" >Total Assets :</p> <div><span>&#8358;</span><span id="total-assets-main-balance">20,000</span></div></div>
+			
+			
+			
+			</div>
+			
+			<div class="student-loan-container" id="savings-history-total-assets">
+			
+			
+			<!--	<div class="student-loan-amount-container">
+			<p class="heading">Smart Savings<p>
+			
+			<div class="details-arrange"><p class="config-arrange" >Saved Amount :</p> <div><span>&#8358;</span><span id="withdraw-enter-pin-amount1">20,000</span></div></div>
+			<div class="details-arrange"><p class="config-arrange" >Repay Amount :</p> <div><span>&#8358;</span><span id="withdraw-enter-pin-amount1">20,000</span></div></div>
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn">Oct 03, 2022</button>
+			</div>
+			</div> 	-->
+			
+			
+			
+			</div>
+			</div>
+			
+			
+			
+			<!-- LOAN CONTINUE -->
+			
+			<div class="hide main-area" id="loan-continue">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="loan-continue-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Continue to get Loan</p>
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="loan-amount">Amount</label>
+			<input id="loan-amount" name="loan-amount" type="number">
+			</div>
+			<div class="details-arrange">
+			<p>Loan duration</p>
+			<div class="ticket-input">
+			<span class="increment-btn" id="loan-decrease">-</span>
+			<span id="duration-select">2</span>
+			<span class="increment-btn" id="loan-increase">+</span>
+			</div>
+			</div>
+			
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="tuition-fees-duration-btn">7 days</button>
+			</div>
+			<div class="details-arrange">
+			<p>Loan due date :</p>
+			<span id="loan-repayment-date">25th Oct, 2023</span>
+			</div>
+			
+			<div class="details-arrange">
+			<p>How much to repay :</p>
+			<span id="loan-repayment-amount">$6,500</span>
+			</div>
+			
+			</div>
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="loan-final-submit-btn">Get Loan</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			<!-- BOOKSHOP -->
+			
+			<div class="hide main-area" id="book-shop-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="bookshop-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Pay For books</p>
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="book-name">Name of book</label>
+			<input id="book-name" name="book-name" type="text">
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="book-amount">Amount</label>
+			<input id="book-amount" name="book-amount" type="number">
+			</div>
+			<div class="details-arrange">
+			<p>Number of books</p>
+			<div class="ticket-input">
+			<span class="increment-btn" id="book-decrease">-</span>
+			<span id="book-number">2</span>
+			<span class="increment-btn" id="book-increase">+</span>
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="book-submit-btn">Buy books</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			</div>
+			
+			<!--SAVINGS PAGE-->
+			
+			<div class="hide main-area" id="savings-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="savings-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Create Savings</p>
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="save-amount">Amount</label>
+			<input id="save-amount" name="save-amount" type="number">
+			</div>
+			<div class="details-arrange">
+			<p>Savings duration</p>
+			<div class="ticket-input">
+			<span class="increment-btn" id="save-decrease">-</span>
+			<span id="save-select">2</span>
+			<span class="increment-btn" id="save-increase">+</span>
+			</div>
+			</div>
+			
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="save-duration-btn">7 days</button>
+			</div>
+			<div class="details-arrange">
+			<p>Disburse date :</p>
+			<span id="disburse-date">25th Oct, 2023</span>
+			</div>
+			
+			<div class="details-arrange">
+			<p>Disbursement amount :</p>
+			<span id="disburse-amount">$6,500</span>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="save-submit-btn">Create Savings</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			<!--FOOD TICKETS-->
+			<div class="food-ticket-container main-area hide" id="food-ticket">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="food-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Buy Food tickets</p>
+			<div class="services-type-icon"></div>
+			</div>
+			
+			<div class="student-loan-container">
+			
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Boluid restuarant<p>
+			<p>ZIK Hall Cafeteria</p>
+			<p>Opens everyday : 7AM - 11PM</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="to-boluid-btn">Get Tickets</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">New Flava restuarant<p>
+			<p>ZIK Hall Cafeteria</p>
+			<p>Opens everyday : 7AM - 11PM</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="to-newflava-btn">Get Tickets</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Klazz restuarant<p>
+			<p>Tedder Hall Cafeteria</p>
+			<p>Opens everyday : 7AM - 11PM</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="to-klazz-btn">Get Tickets</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Archives restuarant<p>
+			<p>Archives</p>
+			<p>Opens everyday : 7AM - 9PM</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="to-archives-btn">Get Tickets</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Mama Anat restuarant<p>
+			<p>Abdullai Ganduje Hall Basement</p>
+			<p>Opens weekdays : 8AM - 6PM</p>
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="to-mama-anat-btn">Get Tickets</button>
+			</div>
+			</div>
+			
+			
+			
+			
+			</div>
+			
+			
+			</div>
+			
+			<!--CONTINUE TO FOOD-->
+			<div class="hide main-area" id="food-continue">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="back-to-food"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Welcome To&nbsp;</p> <span class="heading" id="restaurant-name"> Boluid</span>
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="food-amount">Amount</label>
+			<input id="food-amount" name="food-amount" type="number" placeholder="200">
+			</div>
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn" id="food-decrease">-</span>
+			<span id="food-number">1</span>
+			<span class="increment-btn" id="food-increase">+</span>
+			</div>
+			</div>
+			
+			
+			<div class="details-arrange">
+			<p>Venue :</p>
+			<span id="food-location">ZIK Hall Cafeteria</span>
+			
+			</div>
+			<div class="details-arrange">
+			<p id="food-open-days">Open everyday :</p>
+			<span id="food-open-time">7AM - 11PM</span>
+			
+			</div>
+			</div>
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="food-final-btn">Pay For Ticket</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			<!-- CHANGE PIN -->
+			<div class="hide main-area" id="change-pin">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="change-pin-back-to-menu"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Change Pin</p> 
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="pin-answer1" id="pin-question1">What is your mothers name</label>
+			<input id="pin-answer1" name="pin-answer1" type="text" >
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="pin-answer2" id="pin-question2">What is your fathers name</label>
+			<input id="pin-answer2" name="pin-answer2" type="text" >
+			</div>
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="change-pin-btn">Change Pin</button>
+			</div>
+			
+			</div>
+			</div>
+			</div>
+			
+			<!-- SET PIN -->
+			<div class="hide main-area" id="set-pin">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="set-pin-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Set Pin</p> 
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="previous-pin-answer" >Previous Pin</label>
+			<input id="previous-pin-answer" name="previous-pin-answer" type="number" >
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="new-pin-answer1" >New Pin</label>
+			<input id="new-pin-answer1" name="new-pin-answer1" type="number" >
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="new-pin-answer2" >Confirm New Pin</label>
+			<input id="new-pin-answer2" name="new-pin-answer2" type="number" >
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="set-pin-btn">Set Pin</button>
+			</div>
+			
+			</div>
+			</div>
+			</div>
+			
+			<!--ADD A BANK ACCOUNT-->
+			<div class="hide main-area" id="add-account-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="add-account-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Add A Bank Account</p> 
+			</div>
+			<div class="loan-specifics">
+			<div class="input-field">
+			<label class="label-to-left" for="add-bank-accname" >Account Name</label>
+			<input id="add-bank-accname" name="add-bank-accname" type="text" >
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="add-bank-accno" >Account Number</label>
+			<input id="add-bank-accno" name="add-bank-accno" type="number" >
+			</div>
+			
+			<div class="input-field">
+			<label class="label-to-left" for="add-bank-bankname" >Bank Name</label>
+			<input id="add-bank-bankname" name="add-bank-bankname" type="text" >
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" id="add-bank-acc-btn">Add Account</button>
+			</div>
+			
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			
+			<!--LOAN HISTORY-->
+			
+			<div class="hide main-area" id="loan-history-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="loan-history-page-back"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Loan History</p> 
+			</div>
+			
+			<div id="loan-history-details">
+			
+			
+			
+			</div>
+			
+			</div>
+			</div>
+			
+			<!--SEARCH TRANSACTION-->
+			<div class="hide main-area" id="search-transaction-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="search-transactions-back"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Search Transactions</p> 
+			</div>
+			<div class="search-transactions-bar">
+			<div class="sign-in-wrap">
+			
+			<input type="text" name="search-transactions" id="search-transactions">
+			</div>
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="search-transactions-btn">Search</button>
+			</div>
+			
+			</div>
+			
+			<div id="search-transaction-details">
+			
+			
+			
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			<!--USE ACTIVE TICKETS PAGE-->
+			<div class="hide main-area" id="use-active-ticket-page">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="use-active-ticket-back"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Use Active Tickets</p> 
+			</div>
+			<div class="search-transactions-bar">
+			<div class="sign-in-wrap">
+			
+			<label for="use-active-ticket-input">Enter Ticket ID</label>
+			<input type="text" name="use-active-ticket-input" id="use-active-ticket-input">
+			</div>
+			
+			
+			</div>
+			
+			<div id="use-active-ticket-details">
+			
+			
+			
+			
+			</div>
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="use-active-ticket-btn">Use Ticket</button>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			<!--SIGN UP-->
+			<div class="sign-in-container main-area hide" id="sign-up-el">
+			<div class="sign-in-wrapper">
+			
+			<img class="brand-logo" src="Images/unipays2.png" alt="unipay_logo">
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-firstname">First Name</label>
+			<input type="text" name="sign-up-firstname" id="sign-up-firstname">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-lastname">Last Name</label>
+			<input type="text" name="sign-up-lastname" id="sign-up-lastname">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-phone-number">Phone Number</label>
+			<input type="number" name="sign-up-phone-number" id="sign-up-phone-number">
+			</div>
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-department">Department</label>
+			<input type="text" name="sign-up-department" id="sign-up-department">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-mat-no">Matric Number</label>
+			<input type="number" name="sign-up-mat-no" id="sign-up-mat-no">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-email">Email</label>
+			<input type="email" name="sign-up-email" id="sign-up-email">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-password1">Password</label>
+			<input type="password" name="sign-up-password1" id="sign-up-password1">
+			<div class="small-icon password-show" id="sign-up-password1-show"><i class="fa-regular fa-eye fa-xs"></i></div>
+			
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-password2">Confirm Password</label>
+			<input type="password" name="sign-up-password2" id="sign-up-password2">
+			<div class="small-icon password-show" id="sign-up-password2-show"><i class="fa-regular fa-eye fa-xs"></i></div>
+			
+			</div>
+			
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="sign-up-btn1">Next</button>
+			<p>Already have an account, <span class="linker" id="link-to-sign-in">sign in</span></p>
+			</div>
+			
+			</div>
+			</div>
+			
+			<!--SIGN UP CONTINUE-->
+			
+			<div class="sign-in-container main-area hide" id="sign-up-continue">
+			<div class="sign-in-wrapper">
+			
+			<img class="brand-logo" src="Images/unipays2.png" alt="unipay_logo">
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-security1">Security question 1</label>
+			<input type="text" name="sign-up-security1" id="sign-up-security1">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-answer1">Security question Answer 1</label>
+			<input type="text" name="sign-up-answer1" id="sign-up-answer1">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-security2">Security question 2</label>
+			<input type="text" name="sign-up-security2" id="sign-up-security2">
+			</div>
+			
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-answer2">Security question Answer 2</label>
+			<input type="text" name="sign-up-answer2" id="sign-up-answer2">
+			</div>
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-create-pin">Create four digit pin</label>
+			<input type="number" name="sign-up-create-pin" id="sign-up-create-pin">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-up-confirm-pin">Confirm four digit pin</label>
+			<input type="number" name="sign-up-confirm-pin" id="sign-up-confirm-pin">
+			</div>
+			
+			
+			
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="sign-up-btn2">Sign Up</button>
+			<p>Back to <span class="linker" id="back-to-sign-up1"> Firstpage</span></p>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			<!--SIGN IN-->
+			<div class="sign-in-container main-area hide" id="sign-in-el">
+			<div class="sign-in-wrapper">
+			
+			
+			
+			<img class="brand-logo" src="Images/unipays2.png" alt="unipay_logo">
+			
+			
+			
+			
+			
+			<div class="sign-in-wrap">
+			<label for="sign-in-email">Email</label>
+			<input type="email" name="sign-in-email" id="sign-in-email">
+			</div>
+			
+			<div class="sign-in-wrap">
+			<label for="sign-in-password">Password</label>
+			<input type="password" name="sign-in-password" id="sign-in-password">
+			<div class="small-icon password-show" id="sign-in-password-show"><i class="fa-regular fa-eye fa-xs"></i></div>
+			
+			</div>
+			
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="sign-in-btn">Sign In</button>
+			<p>Don't have an account, <span id="link-to-sign-up" class="linker">sign up</span></p>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			<!--MENU-->
+			
+			<div class="menu menu-area hide" id="menu-bar">
+			
+			<div class="close-menu-wrapper">
+			<div class="services-type-icon profile-pic" id="to-profile-page"><i class="fa-solid fa-user fa-2xl"></i></div>
+			<div class="services-type-icon" id="close-menu"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+			</div>
+			
+			<div class="menu-header">
+			<p class="heading" id="account-menu-name">OCHUKO WHORO</p>
+			<p>Matric Number : <span id="account-menu-matric-no">1111</span></p>
+			<p id="account-menu-time">Wed, 27 Sep, 2023</p>
+			</div>
+			
+			
+			
+			<div class="menu-features">
+			<div class="menu-features-individual" id="to-total-assets-page">
+			<div class="services-type-icon" ><i class="fa-solid fa-hotel fa-2xl"></i></div>
+			<p class="heading">Total Assets</p>
+			</div>
+			
+			
+			
+			<div class="menu-features-individual" id="to-active-tickets">
+			<div class="services-type-icon"><i class="fa-solid fa-money-bill-wheat fa-2xl"></i></div>
+			<p class="heading">Active Tickets</p>
+			</div>
+			
+			<div class="menu-features-individual" id="to-add-account-page">
+			<div class="services-type-icon" ><i class="fa-solid fa-money-check-dollar fa-2xl"></i></div>
+			<p class="heading">Add Your Bank</p>
+			</div>
+			
+			<div class="menu-features-individual" id="to-change-pin">
+			<div class="services-type-icon" ><i class="fa-solid fa-lock fa-2xl"></i></div>
+			<p class="heading">Pin</p>
+			</div>
+			
+			<div class="menu-features-individual" id="to-profile-page2">
+			<div class="services-type-icon" ><i class="fa-solid fa-user fa-2xl"></i></div>
+			<p class="heading">Profile</p>
+			</div>
+			
+			
+			
+			</div>
+			
+			
+			
+			<div class="mode-toggle" id="mode-toggle"><div class="change-mode"></div></div>
+			
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="sign-out-btn">Sign Out</button>
+			</div>
+			
+			
+			</div>
+			
+			<!--EXCHANGE RATES PAGE-->
+			<div class="exchange-container main-area hide" id="exchange-page-el">
+			<header class="pages-header">
+			<div class="services-type-icon" id="exchange-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading" >Currency Exchange</p>
+			</header>
+			
+			<div class="currency-container" id="exchange-to-naira">
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<div>
+			<p class="heading">4000</p>
+			<p >Canadian dollars</p>
+			</div>
+			</div>
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<p class="heading">4000</p>
+			</div>
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<p class="heading">4000</p>
+			</div>
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<p class="heading">4000</p>
+			</div>
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<p class="heading">4000</p>
+			</div>
+			
+			<div class="currency-exchange">
+			<p class="heading">4000</p>
+			<div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div>
+			<p class="heading">4000</p>
+			</div>
+			
+			</div>
+			</div>
+			
+			<!--TRANSPORT TICKETS-->
+			<div class="loan-pages main-area hide" id="transport-page">
+			
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="transport-page-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Transport Tickets</p>
+			<div class="services-type-icon" ></div>
+			</div>
+			<div class="student-loan-container" id="transport-all">
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">ZIK</span></div>
+			<div class="destined-details"><input type="radio" name="trans-type7" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type7" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon"><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">CMF</span></div>
+			<div class="destined-details"><input type="radio" name="trans-type6" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type6" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon" ><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">SUB</span></div>
+			
+			
+			<div class="destined-details"><input type="radio" name="trans-type1" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type1" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon" ><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">Agric</span></div>
+			<div class="destined-details"><input type="radio" name="trans-type2" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details">		<input type="radio" checked name="trans-type2" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn">Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon" ><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">Bookshop/Chapel</span></div>
+			<div class="destined-details"><input type="radio" name="trans-type3" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type3" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon" ><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">Awo/Idia</span></div>
+			<div class="destined-details"><input type="radio" name="trans-type4" value="drop"><p>Drop </p><span>:</span><div><span>&#8358;</span><span class="transport-drop">300</span></div></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type4" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">100</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			<div class="student-loan-amount-container">
+			<div class="destined"><span class="heading">Gate</span> <div class="services-type-icon" ><i class="fa-solid fa-arrows-left-right fa-2xl"></i></div><span class="heading">Ajibode</span></div>
+			<div class="destined-details"><input type="radio" checked name="trans-type5" value="public"><p>Public </p><span>:</span><div><span>&#8358;</span><span class="transport-public">200</span></div></div>
+			
+			<div class="details-arrange">
+			<p>Number of tickets</p>
+			<div class="ticket-input">
+			<span class="increment-btn decrease" >-</span>
+			<span class="transport-ticket-number">1</span>
+			<span class="increment-btn increase">+</span>
+			</div>
+			</div>
+			
+			
+			
+			<div class="button loan-main-btn">
+			<button class="sign-in-btn" >Buy Ticket</button>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			</div>
+			
+			
+			
+			
+			<!--PROFILE PAGE-->
+			<div class="profile-page main-area hide" id="profile-page-el">
+			<header class="pages-header">
+			<div class="services-type-icon" id="profile-to-menu"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">My Profile</p>
+			</header>
+			<div class="profile-data">
+			<div class="profile-head">
+			<div class="services-type-icon profile-pic"><i class="fa-solid fa-user fa-2xl"></i></div>
+			<label class="change-profile-label" for="change-profile-pic">Upload Picture</label>
+			
+			<input type="file" id="change-profile-pic" accept="image/jpeg, image/jpg, image/png">
+			<p class="heading" id="profile-page-top-name">WHORO OCHUKO</p>
+			</div>
+			<div class="profile-input-container">
+			<div class="profile-input">
+			<label for="profile-first-name">First Name</label>
+			<input class="pro-input" id="profile-first-name" name="profile-first-name">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			<div class="profile-input">
+			<label for="profile-last-name">Last Name</label>
+			<input class="pro-input" id="profile-last-name" name="profile-last-name">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			
+			<div class="profile-input">
+			<label for="profile-email">Email</label>
+			<input class="pro-input" id="profile-email" name="profile-email">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			
+			<div class="profile-input">
+			<label for="profile-phone-number">Number</label>
+			<input class="pro-input" id="profile-phone-number" name="profile-phone-number">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			
+			<div class="profile-input">
+			<label for="profile-department">Department</label>
+			<input class="pro-input" id="profile-department" name="profile-department">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			
+			<div class="profile-input">
+			<label for="profile-matric-no">Matric No</label>
+			<input class="pro-input" id="profile-matric-no" name="profile-matric-no">
+			<i class="fa-solid fa-pen "></i>
+			</div>
+			
+			
+			</div>
+			
+			<div class="sign-in-wrap">
+			<button class="sign-in-btn" id="profile-change-btn">Save changes</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			<!--HOME-->
+			<div class="home-page-container main-area hide" id="home-page-el">
+			<header class="home-header">
+			<div class="outline" id="show-menu"><i class="fa-solid fa-bars fa-2xl"></i></div>
+			<div class="side">
+			<div id ="to-search-transactions" class="outline"><i class="fa-solid fa-magnifying-glass "></i></div>
+			<div id="use-active-tickets" class="outline"><i class="fa-solid fa-money-bill-wheat"></i></div>
+			<div id="to-history" class="outline"><i class="fa-solid fa-bell "></i></div>
+			</div>
+			
+			
+			</header>
+			<div class="wrapper">
+			<div class="slide-show-container" id="slide-show-container">
+			<div class="slide-show-main" id="slide-show-main">
+			<img data-number="0" src="images/img1.jpg" class="slide-img" alt="image-slides">
+			<img data-number="1" src="images/img2.jpg" class="slide-img" alt="image-slides">
+			<img data-number="2" src="images/img3.jpg" class="slide-img" alt="image-slides">
+			<img data-number="3" src="images/img4.jpg" class="slide-img" alt="image-slides">
+			<img data-number="4" src="images/img5.jpg" class="slide-img" alt="image-slides">
+			<img data-number="5" src="images/img6.jpg" class="slide-img" alt="image-slides">
+			<img data-number="6" src="images/img7.jpg" class="slide-img" alt="image-slides">
+			<img data-number="7" src="images/img8.jpg" class="slide-img" alt="image-slides">
+			
+			
+			</div>
+			<div class="slide-dot-container">
+		<!--	<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			<div class="slide-dot"></div>
+			-->
+			</div>
+			
+			
+			</div>
+			
+			<div class="show-balance">
+			<div class="top">
+			<div class="small-icon"><i class="fa-solid fa-money-check-dollar fa-xs"></i></div>
+			<p>Total Balance</p>
+			<div class="small-icon" id="hide-balance"><i class="fa-solid fa-lock fa-xs"></i></div>
+			</div>
+			
+			
+			
+			<div class="bottom">
+			<p class="balance-text" id="balance-home">$65,789.56</p>
+			<button class="bottom-btn" id="to-fund-page">Fund</button>
+			</div>
+			
+			
+			</div>
+			
+			<div class="money-transfer">
+			<p class="heading">Money Transfer</p>
+			<div class="money-transfer-types-container">
+			<div class="money-transfer-types" id="to-bank">
+			<div class="transfer-type-icon"><i class="fa-solid fa-money-bill-transfer fa-2xl"></i></div>
+			<p class="heading-2">To Bank</p>
+			</div>
+			<div class="money-transfer-types" id="to-unipays">
+			<div class="transfer-type-icon"><i class="fa-solid fa-arrow-up-from-bracket fa-rotate-180 fa-2xl"></i></div>
+			<p class="heading-2">To Unipays</p>
+			</div>
+			<div class="money-transfer-types" id="to-withdraw">
+			<div class="transfer-type-icon"><i class="fa-solid fa-arrow-up-from-bracket fa-2xl"></i></div>
+			<p class="heading-2">Withdraw</p>
+			</div>
+			<div class="money-transfer-types" id="to-loan-history-page">
+			<div class="transfer-type-icon"><i class="fa-solid fa-square-h fa-2xl"></i></div>
+			<p class="heading-2">Loan History</p>
+			</div>
+			
+			</div>
+			</div>
+			
+			<div class="services">
+			<p class="heading">Services</p>
+			<div class="services-container">
+			<div class="services-type-container">
+			<div id="to-school-fees-page" class="services-types">
+			<div class="services-type-icon"><i class="fa-solid fa-money-bill-wheat fa-2xl"></i></div>
+			<p class="heading-2">Fees</p>
+			</div>
+			<div class="services-types" id="to-bookshop">
+			<div class="services-type-icon"><i class="fa-solid fa-book-medical fa-2xl"></i></div>
+			<p class="heading-2">Bookshop</p>
+			</div>
+			<div class="services-types" id="to-hostel-page">
+			<div class="services-type-icon"><i class="fa-solid fa-hotel fa-2xl"></i></div>
+			<p class="heading-2">Hostel</p>
+			</div>
+			
+			<div class="services-types" id="home-to-food">
+			<div class="services-type-icon"><i class="fa-solid fa-bowl-food fa-2xl"></i></div>
+			<p class="heading-2">Food</p>
+			</div>
+			
+			</div>
+			<div class="services-type-container" >
+			<div class="services-types" id="to-save-page">
+			<div class="services-type-icon"><i class="fa-solid fa-piggy-bank fa-2xl"></i></div>
+			<p class="heading-2">Savings</p>
+			</div>
+			
+			<div class="services-types" id="to-transport">
+			<div class="services-type-icon"><i class="fa-solid fa-van-shuttle fa-2xl"></i></div>
+			<p class="heading-2">Transport</p>
+			</div>
+			<div class="services-types" id="to-data-page">
+			<div class="services-type-icon"><i class="fa-solid fa-signal fa-2xl"></i></div>
+			<p class="heading-2">Data</p>
+			</div>
+			<div class="services-types" id="to-airtime-page">
+			<div class="services-type-icon"><i class="fa-solid fa-phone fa-2xl"></i></div>
+			<p class="heading-2">Airtime</p>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			
+			</div>
+			<div class="link-id-card hide">
+			<div class="services-type-icon"></div>
+			<h4>Create Debit card</h4>
+			<p>Use your ID card to create a debit card that works in
+			your local currency and major currencies</p>
+			</div>
+			</div>
+			
+			
+			<footer class="stick">
+			<div class="services-type-icon"><i class="fa-solid fa-house fa-2xl"></i></div>
+			<div class="services-type-icon" id="to-loan-page"><i class="fa-solid fa-money-check-dollar fa-2xl"></i></div>
+			<div class="services-type-icon" id="to-exchange-rate-page"><i class="fa-solid fa-money-bill-wheat fa-2xl"></i></div>
+			
+			</footer>
+			
+			
+			
+			</div>
+			
+			<!--WITHDRAWAL PAGES-->
+			<div class="hide main-area" id="withdrawal-amount-page0">
+			<div class="withdraw-container" id="withdrawal-page1">
+			<header class="pages-header">
+			<div class="services-type-icon" id="withdraw-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading" id="type-of-transact-el">Withdraw</p>
+			</header>
+			
+			<div class="withdraw-field-container">
+			<p>To Bank Account</p>
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2">Add Bank Account</p>
+			<div class="services-type-icon"></div>
+			</div>
+			</div>
+			<div class="input-field-container">
+			<div class="input-field">
+			<label class="label-to-left" for="withdraw-bank-name">Bank</label>
+			<input id="withdraw-bank-name" name="withdraw-bank-name" type="text">
+			</div>
+			
+			
+			<div class="input-field">
+			<label class="label-to-left" for="withdraw-account-number">Account Number</label>
+			<input id="withdraw-account-number" name="withdraw-account-number" type="number">
+			</div>
+			
+			
+			
+			
+			
+			<div class="input-field with-spinner">
+			<div class="hide" id="name-spinner">
+			<div class="spinner" ></div>
+			</div>
+			<p class="transaction-account-name" id="withdraw-account-name">Please enter details</p>
+			</div>
+			
+			
+			</div>
+			
+			<div class="button withdraw-main-btn">
+			<button class="transaction-btn" id="withdraw-btn1">Next</button>
+			</div>
+			</div>
+			</div>
+			
+			<!--TO UNIPAYS-->
+			
+			
+			<div class="hide main-area" id="unipays-page">
+			<div class="withdraw-container" >
+			<header class="pages-header">
+			<div class="services-type-icon" id="unipays-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Send To Unipays Account</p>
+			</header>
+			
+			<div class="withdraw-field-container">
+			<p>To Bank Account</p>
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2">Add Student Matric Number</p>
+			<div class="services-type-icon"></div>
+			</div>
+			</div>
+			<div class="input-field-container">
+			<div class="input-field">
+			<label class="label-to-left" for="unipays-matric-no">Matric No</label>
+			<input id="unipays-matric-no" name="unipays-matric-no" type="number">
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<div class="input-field with-spinner">
+			<div class="hide" id="unipays-name-spinner">
+			<div class="spinner" ></div>
+			</div>
+			<p class="transaction-account-name" id="unipays-account-name">Please enter details</p>
+			</div>
+			
+			
+			</div>
+			
+			<div class="button withdraw-main-btn">
+			<button class="transaction-btn" id="unipays-transfer-btn">Next</button>
+			</div>
+			</div>
+			</div>
+			
+			
+			<!--FUND ACCOUNT-->
+			
+			<div class="hide main-area" id="fund-page">
+			<div class="withdraw-container" >
+			<header class="pages-header">
+			<div class="services-type-icon" id="fund-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Fund Account</p>
+			</header>
+			
+			<div class="withdraw-field-container">
+			<p>To Unipays Account</p>
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2">Amount</p>
+			<div class="services-type-icon"></div>
+			</div>
+			</div>
+			<div class="input-field-container">
+			<div class="input-field">
+			<label class="label-to-left" for="fund-amount">Amount</label>
+			<input id="fund-amount" name="fund-amount" type="number">
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="button withdraw-main-btn">
+			<button class="transaction-btn" id="fund-btn">Continue</button>
+			</div>
+			</div>
+			</div>
+			
+			</div>
+			<!--FUND CONTINUE-->
+			<div class="hide main-area" id="fund-continue">
+			<div class="loan-pages">
+			<div class="student-loan-header">
+			<div class="services-type-icon" id="back-to-fund"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Continue To Fund</p>
+			</div>
+			
+			<div class="student-loan-amount-container">
+			<p class="heading">Transfer <span id ="fund-amount-text">5000</span> to the account below<p>
+			<p>Account Name : Wema Unipays Gateway <span id="fund-number">1</span></p>
+			<p>Account Number : <span id="fund-account-number">543 764 2679</span></p>
+			
+			</div>
+			
+			
+			<div class="hide" id="fund-verify">
+			<div class=" currency-exchange fund-verify" >
+			<div class="fund-account">
+			
+			
+			</div>
+			</div>
+			</div>
+			
+			
+			<div class="button loan-main-btn fund-verify-btn">
+			<button class="sign-in-btn" id="fund-final-btn">I have sent the money</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			<!--WITHDRAWAL AMOUNT PAGE-->
+			<div class="hide main-area" id="withdrawal-amount-page1">
+			<div class="withdrawal-amount-page1" >
+			<header class="pages-header">
+			<div class="services-type-icon" id="withdraw-back1"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			</header>
+			<div class="amount-input-container">
+			
+			<label for="withdraw-amount" class="amount-text">Amount(&#8358;)</label>
+			<input type="number" name="withdraw-amount" id="withdraw-amount" placeholder="200.00 - 200,000.00">
+			<p class="amount-text">Balance: <span id="withdraw-balance">$7,800</span></p>
+			
+			</div>
+			
+			
+			<div class="suggestions-container" id="withdraw-suggest-el">
+			<div class="amount-suggestion" ><p data-amount = "1000" class="suggest">&#8358;1,000</p></div>
+			<div class="amount-suggestion" ><p data-amount = "2000" class="suggest">&#8358;2,000</p></div>
+			<div class="amount-suggestion" ><p data-amount = "5000" class="suggest">&#8358;5,000</p></div>
+			<div class="amount-suggestion" ><p data-amount = "10000" class="suggest">&#8358;10,000</p></div>
+			</div>
+			
+			<div class="button">
+			<button class="transaction-btn" id="withdraw-btn2">Proceed</button>
+			</div>
+			</div>
+			</div>
+			<!--ENTER PIN PAGE-->
+			<div class="hide main-area" id="withdrawal-amount-page2">
+			<div class="withdrawal-amount-page2" >
+			<header class="pages-header">
+			<div class="services-type-icon" id="withdraw-back2"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			</header>
+			<div class="details">
+			<p class="heading" id="withdraw-enter-pin-type">Transaction Type</p>
+			<div class="details-arrange"><p class="config-arrange" id="pin-details-account-name">Account Name :</p> <span id="withdraw-enter-pin-name">Whoro</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="pin-details-account-number">Account Number :</p> <span id="withdraw-enter-pin-number">222</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="pin-details-bank-name">Bank Name :</p> <span id="withdraw-enter-pin-bank">first</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="pin-details-amount">Transaction amount :</p> <div><span>&#8358;</span><span id="withdraw-enter-pin-amount">20,000</span></div></div>
+			</div>
+			
+			<div class="input-field pin-field">
+			<p class="hide transaction-account-name" id="pin-error">Hi</p>
+			<label for="withdrawal-pin">Enter Pin</label>
+			<input class="pin-input" type="number" name="withdrawal-pin" id="withdrawal-pin">
+			</div>
+			
+			<div class="button">
+			<button class="transaction-btn" id="withdraw-btn3">Withdraw</button>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			<!--SUCCESSFUL PAGE-->
+			<div class="hide main-area" id="withdrawal-amount-page3">
+			<div class="withdrawal-amount-page3 success-page-arranged" >
+			<header id="successful-header" class="pages-header">
+			<div class="services-type-icon" id="withdraw-back3"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Transaction Details</p>
+			</header>
+			<div class="details" id="success-download-html">
+			<div class="services-type-icon" id="success-icon"><i class="fa-solid fa-check fa-2xl"></i></div>
+			
+			<p class="heading" id="withdraw-enter-pin-type1">Transaction Successful</p>
+			<div class="details-container">
+			<div class="details-arrange"><p class="config-arrange" id="success-account-name">Account Name :</p> <span id="withdraw-enter-pin-name1">Whoro</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="success-account-number">Account Number :</p> <span id="withdraw-enter-pin-number1">222</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="success-bank-name">Bank Name :</p> <span id="withdraw-enter-pin-bank1">first</span></div>
+			<div class="details-arrange"><p class="config-arrange" id="success-amount">Transaction amount :</p> <div><span>&#8358;</span><span id="withdraw-enter-pin-amount1">20,000</span></div></div>
+			
+			<div class="details-arrange"><p class="config-arrange" id="success-id">Transaction ID :</p> <span id="withdraw-id1">hdbfbjk</span></div>
+			<div class="details-arrange"><p  class="config-arrange" id="success-date">Date :</p> <span id="withdraw-date1">24-April</span></div>
+			</div>
+			</div>
+			
+			<div class="download-receipt" id="download-success-receipt">
+			<span>Download PDF</span>
+			<i class="fa-solid fa-download fa-2xl"></i>
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			<!--HISTORY-->
+			<div class="history-container aside-area hide" id="history">
+			<div class="services-type-icon" id="history-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			<p class="heading">Transaction History</p>
+			<div id="history-details">
+			<!--	<div class="transaction-history">
+			<p>Transaction Type</p>
+			<div class="details-container">
+			
+			<div class="details-arrange"><p>Account Name :</p> <span>Whoro</span></div>
+			<div class="details-arrange"><p>Account Number :</p> <span >222</span></div>
+			<div class="details-arrange"><p>Bank Name :</p> <span>first</span></div>
+			<div class="details-arrange"><p>Transaction amount :</p> <span>20,000</span></div>
+			<div class="details-arrange"><p>Transaction ID :</p> <span>hdbfbjk</span></div>
+			<div class="details-arrange"><p>Date :</p> <span>24-April</span></div>
+			</div>
+			</div>
+			
+			<div class="transaction-history">
+			<p>Transaction Type</p>
+			<div class="details-container">
+			
+			<div class="details-arrange"><p>Account Name :</p> <span>Whoro</span></div>
+			<div class="details-arrange"><p>Account Number :</p> <span >222</span></div>
+			<div class="details-arrange"><p>Bank Name :</p> <span>first</span></div>
+			<div class="details-arrange"><p>Transaction amount :</p> <span>20,000</span></div>
+			<div class="details-arrange"><p>Transaction ID :</p> <span>hdbfbjk</span></div>
+			<div class="details-arrange"><p>Date :</p> <span>24-April</span></div>
+			</div>
+			</div>
+			
+			<div class="transaction-history">
+			<p>Transaction Type</p>
+			<div class="details-container">
+			
+			<div class="details-arrange"><p>Account Name :</p> <span>Whoro</span></div>
+			<div class="details-arrange"><p>Account Number :</p> <span >222</span></div>
+			<div class="details-arrange"><p>Bank Name :</p> <span>first</span></div>
+			<div class="details-arrange"><p>Transaction amount :</p> <span>20,000</span></div>
+			<div class="details-arrange"><p>Transaction ID :</p> <span>hdbfbjk</span></div>
+			<div class="details-arrange"><p>Date :</p> <span>24-April</span></div>
+			</div>
+			</div>-->
+			
+			</div>
+			</div>
+			
+			
+			<!--ACTIVE TICKETS-->
+			<div class="history-container main-area hide" id="active-tickets-page">
+			<div class="services-type-icon" id="active-tickets-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			<p class="heading">Active Tickets</p>
+			<div id="active-tickets-container">
+			
+			<!--		<div class="transaction-history">
+			<p>Transaction Type</p>
+			<div class="details-container">
+			<div class="details-arrange"><p>Account Name :</p> <span>Whoro</span></div>
+			<div class="details-arrange"><p>Account Number :</p> <span >222</span></div>
+			<div class="details-arrange"><p>Bank Name :</p> <span>first</span></div>
+			<div class="details-arrange"><p>Transaction amount :</p> <span>20,000</span></div>
+			<div class="details-arrange"><p>Transaction amount :</p> <span>20,000</span></div>
+			<div class="details-arrange"><p>Transaction ID :</p> <span>hdbfbjk</span></div>
+			<div class="details-arrange"><p>Date :</p> <span>24-April</span></div>
+			</div>
+			</div>
+			
+			-->
+			
+			</div>
+			</div>
+			
+			
+			<!--DATA PAGE-->
+			<div class="hide main-area" id="data-page-show">
+			<div class="data-page">
+			<header class="data-header">
+			<div class="data-div1">
+			<div class="services-type-icon" id="data-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Enter Phone Number</p>
+			</div>
+			<div class="data-div2" >
+			<div class="services-type-icon" id="data-network-img">
+			<img class="network-img"  src="Images/mtn.png" alt="network-type">
+			</div>
+			<div class="network-type">
+			<span id="data-network-type">MTN</span>
+			<span class="increment-btn" id="data-network-increase">></span>
+			</div>
+			<div class="input-field">
+			<input id="data-phone-number" name="data-phone-number" type="number">
+			</div>
+			
+			
+			</div>
+			</header>
+			<p class="transaction-account-name hide" id="data-error1">Please select a data bundle</p>
+			<p class="transaction-account-name hide" id="data-error2">Phone number should be 11 digits</p>
+			
+			<div class="data-type" id="data-type-container">
+			<p data-type="general" class="data-difference move-up">General Data<span class="data-active show"></span></p>
+			<p data-type="academics" class="data-difference">Studies Data<span class="data-active hide"></span></p>
+			</div>
+			<div class="data-compound" id="data-wrap">
+			<div  id="data-general-el" class="show">
+			<div class="data-suggestions-container">
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="1" class="data-qty">1GB</p>
+			<p class="data-amount" data-amount = "200">&#8358;200</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2" class="data-qty">2GB</p>
+			<p class="data-amount" data-amount = "400">&#8358;400</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="3" class="data-qty">3GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="14" class="duration">14 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2.5" class="data-qty">2.5GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="14" class="duration">14 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="3.5" class="data-qty">3.5GB</p>
+			<p class="data-amount" data-amount = "650">&#8358;650</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="14" class="duration">14 days</p>
+			<div  class="data-amount-wrapper">
+			<p data-quantity ="6" class="data-qty">6GB</p>
+			<p class="data-amount" data-amount = "800">&#8358;800</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="30" class="duration">30 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2.5" class="data-qty">2.5GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="30" class="duration">30 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2.5" class="data-qty">2.5GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="30" class="duration">30 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2.5" class="data-qty">2.5GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="60" class="duration">60 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="100" class="data-qty">100GB</p>
+			<p class="data-amount" data-amount = "20000">&#8358;20,000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="90" class="duration">90 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="150" class="data-qty">150GB</p>
+			<p class="data-amount" data-amount = "28000">&#8358;28,000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="120" class="duration">120 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="200" class="data-qty">200GB</p>
+			<p class="data-amount" data-amount = "35500">&#8358;35,500</p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			<div  id="data-academics-el" class="hide">
+			<div class="data-suggestions-container">
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="1" class="duration">1 day</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="0.3" class="data-qty">300MB</p>
+			<p class="data-amount" data-amount = "20">&#8358;20</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="1" class="duration">1 day</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="0.7" class="data-qty">700MB</p>
+			<p class="data-amount" data-amount = "35">&#8358;35</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="1" class="duration">1 day</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="1" class="data-qty">1GB</p>
+			<p class="data-amount" data-amount = "50">&#8358;50</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="3" class="duration">3 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="1" class="data-qty">1GB</p>
+			<p class="data-amount" data-amount = "100">&#8358;100</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="3" class="duration">3 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="2.5" class="data-qty">2.5GB</p>
+			<p class="data-amount" data-amount = "200">&#8358;200</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="3" class="duration">3 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="5" class="data-qty">5GB</p>
+			<p class="data-amount" data-amount = "350">&#8358;350</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="1" class="data-qty">1GB</p>
+			<p class="data-amount" data-amount = "200">&#8358;200</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="3" class="data-qty">3GB</p>
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">7 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="8" class="data-qty">8GB</p>
+			<p class="data-amount" data-amount = "1000">&#8358;1000</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="14" class="duration">14 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="8" class="data-qty">8GB</p>
+			<p class="data-amount" data-amount = "1500">&#8358;1500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="30" class="duration">30 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="15" class="data-qty">15GB</p>
+			<p class="data-amount" data-amount = "4000">&#8358;4000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="30" class="duration">30 days</p>
+			<div class="data-amount-wrapper">
+			<p data-quantity ="25" class="data-qty">25GB</p>
+			<p class="data-amount" data-amount = "6500">&#8358;6500</p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			</div>
+			<div class="button data-btn">
+			<button class="transaction-btn" id="data-btn">Proceed</button>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			
+			
+			<!--AIRTIME PAGE-->
+			<div class="hide main-area" id="airtime-page-show">
+			<div class="data-page">
+			<header class="airtime-header">
+			<div class="data-div1">
+			<div class="services-type-icon" id="airtime-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			<p class="heading">Enter Phone Number</p>
+			</div>
+			<div class="data-div2">
+			<div class="services-type-icon" id="airtime-network-img">
+			<img class="network-img"  src="Images/mtn.png" alt="network-image">
+			</div>
+			<div class="network-type">
+			<span id="airtime-network-type">MTN</span>
+			<span class="increment-btn" id="airtime-network-increase">></span>
+			</div>
+			<div class="input-field">
+			<input id="airtime-phone-number" name="airtime-phone-number" type="number">
+			</div>
+			
+			</div>
+			
+			
+			
+			
+			
+			<div class="data-div2">
+			<label for="airtime-amount">Amount</label>
+			<div class="input-field">
+			<input id="airtime-amount" name="airtime-amount" type="number">
+			</div>
+			</div>
+			</header>
+			
+			<p class="transaction-account-name hide" id="airtime-error1">Amount should be greater than 20</p>
+			<p class="transaction-account-name hide" id="airtime-error2">Phone number should be 11 digits</p>
+			
+			
+			<div class="data-compound" id="airtime-wrap">
+			<div id="airtime-amount-el">
+			<div class="fees-suggestions-container">
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="3" class="duration">-&#8358;3</p>
+			<div class="data-amount-wrapper">
+			<p class="data-amount" data-amount = "50">&#8358;50</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="7" class="duration">-&#8358;7</p>
+			<div class="data-amount-wrapper">
+			<p class="data-amount" data-amount = "100">&#8358;100</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="12" class="duration">-&#8358;12</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "200">&#8358;200</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="16" class="duration">-&#8358;16</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "300">&#8358;300</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="32" class="duration">-&#8358;32</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "500">&#8358;500</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="56" class="duration">-&#8358;56</p>
+			<div  class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "1000">&#8358;1000</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="100" class="duration">-&#8358;100</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "2000">&#8358;2000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="200" class="duration">-&#8358;200</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "5000">&#8358;5000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="350" class="duration">-&#8358;350</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "10000">&#8358;10000</p>
+			</div>
+			</div>
+			</div>
+			
+			<div class="data-suggestion-rows">
+			<div class="data-suggestion">
+			<p data-duration="600" class="duration">-&#8358;600</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "20000">&#8358;20,000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="800" class="duration">-&#8358;800</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "30000">&#8358;30,000</p>
+			</div>
+			</div>
+			<div class="data-suggestion">
+			<p data-duration="1000" class="duration">-&#8358;1000</p>
+			<div class="data-amount-wrapper">
+			
+			<p class="data-amount" data-amount = "50000">&#8358;50,000</p>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			<div class="button data-btn">
+			<button class="transaction-btn" id="airtime-btn">Proceed</button>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			
+			
+			<!--HOSTEL FEES-->
+			
+			
+			<div class="hide main-area" id="hostel-fees-page-show">
+			
+			<div class="data-page">
+			
+			<header class="data-header fees-header">
+			<div class="data-div1">
+			<div class="services-type-icon" id="hostel-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			<p class="heading">Pay Your Fees Easily</p>
+			
+			
+			</div>
+			
+			<div class="hide" id="hostel-fee-install-details">
+			<div class="details-arrange">
+			
+			<p>Amount paid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p><span id="hostel-fees-installment-paid">No</span>
+			</div>
+			<div class="details-arrange">
+			
+			<p>Amount left &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p><span id="hostel-fees-installment-left"></span>
+			</div>
+			
+			
+			
+			<div class="details-arrange">
+			
+			<p>Next due date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </p><span id="hostel-fees-next-payment"></span>
+			</div>
+			
+			</div>
+			</header>
+			
+			<div class="data-type" id="hostel-fee-data-type">
+			<p data-time="1"  class="data-difference move-up">1 time<span class="data-active show"></span></p>
+			<p data-time="2"  class="data-difference">2 time<span  class="data-active hide"></span></p>
+			<p data-time="3"  class="data-difference">3 time<span class="data-active hide"></span></p>
+			<p data-time="4"  class="data-difference">4 time<span class="data-active hide"></span></p>
+			</div>
+			
+			
+			<div class="data-compound">
+			
+			<div id="hostel-fees">
+			
+			<div><p>Payments in installments are spread over a period of 32 weeks</p></div>
+			
+			<div class = "hostel-fees-suggestions-container">
+			
+			<div id="hostel-fees-select" class="withdraw-field-container ">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon "></div>
+			<p class="heading-2 fee-type">Accommodation Fee</p>
+			<p  data-amount="40000" id="hostel-fee-amount" class="heading-2 fee-amount">&#8358;40,000</p>
+			</div>
+			</div>
+			
+			<div id="hostel-levy-select" class="withdraw-field-container">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon "></div>
+			<p class="heading-2 fee-type">Hostel Levy</p>
+			<p data-amount="6000" id="hostel-levy-amount" class="heading-2 fee-amount">&#8358;6,000</p>
+			</div>
+			</div>
+			
+			
+			</div>
+			<div class="button data-btn">
+			<button class="transaction-btn" id="hostel-fees-total-btn">
+			<span class="show" id="hostel-fee-total">Proceed</span>
+			</button>
+			</div>
+			
+			</div>
+			
+			</div>
+			
+			</div>
+			</div>
+			
+			
+			
+			
+			<!--SCHOOL FEES-->
+			<div class="hide main-area" id="school-fees-page-show">
+			<div class="data-page">
+			<header class="data-header fees-header">
+			<div class="data-div1">
+			<div class="services-type-icon" id="school-fees-to-home"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			<p class="heading">Pay Your Fees Easily</p>
+			
+			
+			
+			</div>
+			<div class="hide" id="school-fee-install-details">
+			<div class="details-arrange">
+			
+			<p>Amount paid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p><span id="school-fees-installment-paid"></span>
+			</div>
+			<div class="details-arrange">
+			
+			<p>Amount left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p><span id="school-fees-installment-left"></span>
+			
+			</div>
+			
+			<div class="details-arrange">
+			
+			<p>Next due date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</p><span id="school-fees-next-payment"></span>
+			</div>
+			
+			</div>
+			</header>
+			<div class="data-type" id="school-fee-data-type">
+			<p data-time="1"  class="data-difference move-up">1 time<span class="data-active show"></span></p>
+			<p data-time="2"  class="data-difference">2 time<span class="data-active hide"></span></p>
+			<p data-time="3"  class="data-difference">3 time<span class="data-active hide"></span></p>
+			<p data-time="4"  class="data-difference">4 time<span class="data-active hide"></span></p>
+			</div>
+			<div class="data-compound">
+			<div id="school-fees">
+			<div><p>Payments in installments are spread over a period of 32 weeks</p></div>
+			<div class = "fees-suggestions-container">
+			
+			<div id="school-fees-select" class="withdraw-field-container ">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon "></div>
+			<p class="heading-2 fee-type">School Fee</p>
+			<p  data-amount="35000" id="school-fee-amount" class="heading-2 fee-amount">&#8358;35,000</p>
+			</div>
+			</div>
+			
+			<div id="tech-fee-select" class="withdraw-field-container">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon "></div>
+			<p class="heading-2 fee-type">Technology Fee</p>
+			<p data-amount="10000" id="tech-fee-amount" class="heading-2 fee-amount">&#8358;10,000</p>
+			</div>
+			</div>
+			
+			<div id="utility-fee-select" class="withdraw-field-container">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2 fee-type">Utility Fee</p>
+			<p data-amount="20000" id="utility-fee-amount" class="heading-2 fee-amount">&#8358;20,000</p>
+			</div>
+			</div>
+			
+			<div id="professional-fee-select" class="withdraw-field-container">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2 fee-type">Professional Fee</p>
+			<p data-amount="75000" id="professional-fee-amount" class="heading-2 fee-amount">&#8358;75,000</p>
+			</div>
+			</div>
+			
+			<div id="ges-fee-select" class="withdraw-field-container">
+			<div class="withdraw-bank-account">
+			<div class="services-type-icon"></div>
+			<p class="heading-2 fee-type">GES Levy</p>
+			<p data-amount="5000" id="ges-fee-amount" class="heading-2 fee-amount">&#8358;5,000</p>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			</div>
+			
+			</div>
+			<div class="button data-btn">
+			<button class="transaction-btn" id="school-fees-total-btn">
+			<span class="show" id="school-fee-total">Proceed</span>
+			</button>
+			</div>
+			</div>
+			
+			
+			
+			</div>
+			
+			
+			<!--REPAY LOAN-->
+			<div class="hide main-area" id="repay-loan-page">
+			<div class="withdrawal-amount-page1" >
+			<header class="pages-header">
+			<div class="services-type-icon" id="repay-loan-back"><i class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+			
+			</header>
+			<div class="amount-input-container">
+			
+			<label for="withdraw-amount" class="amount-text">Amount(NGN)</label>
+			<input type="number" name="repay-loan-amount" id="repay-loan-amount" placeholder="1,000.00 - 200,000.00">
+			<p class="amount-text">Balance: <span id="repay-loan-balance">$7,800</span></p>
+			
+			</div>
+			
+			
+			
+			<div class="button">
+			<button class="transaction-btn" id="repay-loan-btn">Proceed</button>
+			</div>
+			</div>
+			</div>
+			
+		
+			</div>
+		
+		</body>
+	</html>
+	
