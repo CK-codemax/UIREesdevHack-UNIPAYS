@@ -1648,7 +1648,7 @@
 		if(softLoan?.from.repayDate <= Date.now()){
 		
 		if(currentBalance > softLoan?.from.amount + 200){
-		withdrawAccount = +softLoan?.from.repayAmount - +softLoan?.from.amountPaid
+		withdrawAmount = +softLoan?.from.repayAmount - +softLoan?.from.amountPaid
 		transactionType = 'Repay Soft Loan'
 		const dataDetails = {
 		accountNumber : 'UNIPAYS FINANCE',
@@ -4606,7 +4606,7 @@
 		
 		
 		loanType = 'Tuition loan'
-		if(domVariables.loanContinueTuition.textContent === 'Request Loan'){
+		if(domVariables.loanContinueTuition.textContent === 'Request Loan' && loanType === 'Tuition loan'){
 		
 		
 		
@@ -4641,7 +4641,7 @@
 		
 		showPage(domVariables.loanContinuePageEl)
 		hidePage(domVariables.loanPageEl)
-		}else if(domVariables.loanContinueTuition.textContent === 'Repay Loan'){
+		}else if(domVariables.loanContinueTuition.textContent === 'Repay Loan' && loanType === 'Tuition loan'){
 		transactionType = 'Repay Tuition Loan'
 		
 		showPage(domVariables.repayLoanPage)
@@ -4720,7 +4720,7 @@
 		
 		domVariables.loanContinueSoft.addEventListener('click', function(){
 		loanType = 'Soft loan'
-		if(domVariables.loanContinueSoft.textContent === 'Request Loan'){
+		if(domVariables.loanContinueSoft.textContent === 'Request Loan' && loanType === 'Soft loan'){
 		
 		
 		
@@ -4741,7 +4741,7 @@
 		showPage(domVariables.loanContinuePageEl)
 		hidePage(domVariables.loanPageEl)
 		
-		}else if(domVariables.loanContinueSoft.textContent === 'Repay Loan'){
+		}else if(domVariables.loanContinueSoft.textContent === 'Repay Loan' && loanType === 'Soft loan'){
 		transactionType = 'Repay Soft Loan'
 		
 		showPage(domVariables.repayLoanPage)
@@ -4857,7 +4857,7 @@
 		
 		hidePage(domVariables.repayLoanPage)
 		showPage(domVariables.withdrawPage3El)
-		
+		domVariables.repayLoanAmount.value = ''
 		})
 		
 		
