@@ -1,5 +1,5 @@
 'use strict'
-		
+		localStorage.clear()
 		
 		
 		//DOM ELEMENTS
@@ -2371,12 +2371,15 @@ disburseDate : disburseDate,
 		
 		
 		currentAccount.transactions.push(new TransactTicket(dataToUse));
-		console.log(currentAccount.transactions)
+		
 		
 		
 		currentBalance = calcBalance(currentAccount)		
 		updateBalance(currentBalance)
-		
+
+		localStorage.clear()
+		setLocalStorage(accounts)
+					    
 		})
 		setTimeout(() => {
 		hidePage(domVariables.useActiveTicketPage)
