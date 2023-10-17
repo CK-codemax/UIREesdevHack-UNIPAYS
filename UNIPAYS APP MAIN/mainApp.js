@@ -694,7 +694,7 @@
 		}
 		
 		const TransactSavings = class extends NewTransactionTransfer{
-		constructor(details){
+		constructor(details, disburseDate){
 		super(details)
 		this.type = 'Smart Savings';
 		this.status = 'active';
@@ -702,6 +702,8 @@
 		receiverAccName : details.transactAccName,
 		receiverAccNo : details.transactAccNo,
 		amount : -details.amount,
+disburseDate : disburseDate,
+
 		receiverBankName : details.transactBankName,
 		id : createID(this.date, this.type),
 		}
@@ -1631,16 +1633,16 @@
 		
 		savedAsset?.forEach((el) => {
 		if(el.to.disburseDate <= Date.now()){
-		if(currentBalance > +el.to.disburseAmount + 200){
-		withdrawAmount = +el.to.disburseAmount
+		
+		withdrawAmount = +el.to.receiverAccNo
 		
 		withdrawAccount = {accountName : `UNIPAYS Disburse`,
 		accountNumber : 'Disburse Account',
 		bankName : 'UNIPAYS',}
 		
-		currentAccount.transactions.push(new TransactFund(createTransactDetails(currentAccount, withdrawAccount, withdrawAmount)));
-		
-		}
+		currentAccount.transactions.push(new TransactReceiver(createTransactDetails(currentAccount, withdrawAccount, withdrawAmount)));
+		currentBalance = calcBalance (currentAccount)
+		updateBalance(currentBalance)
 		}
 		})
 		
@@ -2964,7 +2966,7 @@
 		}
 		
 		const dataToUse = createTransactDetails(currentAccount, dataDetails, withdrawAmount)
-		const newTransactionFees = new TransactSavings(dataToUse)
+		const newTransactionFees = new TransactSavings(dataToUse, +disburseDate)
 		
 		currentAccount.transactions.push(newTransactionFees);
 		
