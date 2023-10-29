@@ -1,5 +1,5 @@
 'use strict'
-	//	localStorage.clear()
+		localStorage.clear()
 		
 		
 		//DOM ELEMENTS
@@ -2224,7 +2224,7 @@ disburseDate : disburseDate,
 		let activeTransactions = []
 		searchAccounts.forEach((el) => {
 		
-		activeTransactions = [...activeTransactions, ...el.transactions.filter((el) => el.status === 'active' )]
+		activeTransactions = [...activeTransactions, ...el.transactions.filter((el) => el.status === 'active' && el.type !== 'Student Loan' && el.type !== 'Smart Savings')]
 		
 		})
 		
