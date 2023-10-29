@@ -1,5 +1,5 @@
 'use strict'
-		//localStorage.clear()
+		localStorage.clear()
 		
 		
 		//DOM ELEMENTS
