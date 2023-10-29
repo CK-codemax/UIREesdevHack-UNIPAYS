@@ -1673,6 +1673,7 @@ disburseDate : disburseDate,
 		bankName : 'UNIPAYS',}
 		
 		currentAccount.transactions.push(new TransactReceiver(createTransactDetails(currentAccount, withdrawAccount, withdrawAmount)));
+		el.status = 'disbursed'
 		currentBalance = calcBalance (currentAccount)
 		updateBalance(currentBalance)
 		}
@@ -1856,7 +1857,7 @@ disburseDate : disburseDate,
 		hideProfilePages()
 		hideHome()
 		
-		const savings = currentAccount.transactions.filter((el) => el.type === 'Smart Savings')
+		const savings = currentAccount.transactions.filter((el) => el.type === 'Smart Savings' && el.status === 'active')
 		const savingsTotal = savings.reduce((sum, trans) => sum + trans.to.receiverAccNo, 0)
 		
 		domVariables.totalAssetsMainBalance.textContent = formatNumber(savingsTotal + currentBalance)
