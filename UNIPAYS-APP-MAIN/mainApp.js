@@ -1218,7 +1218,36 @@ disburseDate : disburseDate,
 		
 		
 		createBeginTransactions(account1, 20000, 80000)
+		const createAccount1Initials = function(){
+
+			const dataDetails = {
+		accountName : 'Soft loan',
+		bankName : 'UNIPAYS',
+		accountNumber : 'UNIPAYS FINANCE',
+		}
+		const loanNow = Date.now()
+		const loanDay = loanNow + (3 * 60 * 1000)
+		const dataToUse = createTransactDetails(newAccount, dataDetails, 5000)
+		const newTransactionFees = new TransactLoan(dataToUse, loanDay, 6000)
 		
+		account1.transactions.push(newTransactionFees);
+		
+		const todayDate = Date.now() 
+		const disburseAmount = 10000
+		const disburseDate = todayDate + (2 * 60 * 1000)
+
+		const dataDetails1 = {
+		accountName : new Date(disburseDate).toLocaleDateString('en-GB', {year:'numeric', month:'short', weekday:'short', day:'2-digit'}),
+		bankName : 'UNIPAYS',
+		accountNumber : +disburseAmount.toFixed(2),
+		}
+		
+		const dataToUse1 = createTransactDetails(newAccount, dataDetails1, 9850)
+		const newTransactionFees1 = new TransactSavings(dataToUse1, +disburseDate)
+		
+		account1.transactions.push(newTransactionFees1);
+		}
+createAccount1Initials()
 		
 		
 		const account2 = {
