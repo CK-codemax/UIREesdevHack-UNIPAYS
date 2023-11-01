@@ -6,3 +6,16 @@ To view the live version of the UNIPAYS APP, copy and paste the link below into 
 https://ck-codemax.github.io/UIREesdevHack-UNIPAYS/UNIPAYS-APP-MAIN/
 
 I added a user guide to this repository for users of the UNIPAYS app to easily navigate through the UNIPAYSS Application.
+You can log in with 
+account1
+email : ochuko@gmail.com
+password : try1
+pin : 1111
+
+OR
+account2
+email : goodkelv@gmail.com
+password : kvngd
+pin : 2222
+
+Alternatively, you ca sign up and create a new account
