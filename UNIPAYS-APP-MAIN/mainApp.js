@@ -4680,6 +4680,7 @@ disburseDate : disburseDate,
 		showPage(domVariables.loanContinuePageEl)
 		hidePage(domVariables.loanPageEl)
 		}else if(domVariables.loanContinueTuition.textContent === 'Repay Loan' && loanType === 'Tuition loan'){
+		domVariables.repayLoanAmount.value = ''
 		transactionType = 'Repay Tuition Loan'
 		
 		showPage(domVariables.repayLoanPage)
@@ -4780,6 +4781,7 @@ disburseDate : disburseDate,
 		hidePage(domVariables.loanPageEl)
 		
 		}else if(domVariables.loanContinueSoft.textContent === 'Repay Loan' && loanType === 'Soft loan'){
+		domVariables.repayLoanAmount.value = ''
 		transactionType = 'Repay Soft Loan'
 		
 		showPage(domVariables.repayLoanPage)
@@ -4862,7 +4864,7 @@ disburseDate : disburseDate,
 		
 		withdrawAmount = +domVariables.repayLoanAmount.value
 		if(withdrawAmount < 1000)return
-		if(withdrawAmount > currentAccount.transactions.find((el) => el.status === 'active' && el.accName === 'Soft loan').from.repayAmount)return
+		if(withdrawAmount > (currentAccount.transactions.find((el) => el.status === 'active' && el.accName === 'Soft loan').from.repayAmount))return
 		
 		
 		transactionDetails = {
@@ -4878,7 +4880,7 @@ disburseDate : disburseDate,
 		withdrawAmount = +domVariables.repayLoanAmount.value
 		if(withdrawAmount < 1000)return
 		
-		if(withdrawAmount > currentAccount.transactions.find((el) => el.status === 'active' && el.accName === 'Tuition loan').from.repayAmount)return
+		if(withdrawAmount > (currentAccount.transactions.find((el) => el.status === 'active' && el.accName === 'Tuition loan').from.repayAmount))return
 		
 		
 		transactionDetails = {
